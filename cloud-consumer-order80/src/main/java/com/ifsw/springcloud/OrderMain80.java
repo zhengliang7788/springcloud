@@ -10,9 +10,9 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
  * @date 2020/12/10 22:23
  */
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
-public class OrderMain {
+public class OrderMain80 {
     public static void main(String[] args) {
-        SpringApplication.run(OrderMain.class, args);
+        SpringApplication.run(OrderMain80.class, args);
     }
 
 }
