@@ -3,10 +3,8 @@ package com.ifsw.springcloud.controller;
 import com.ifsw.springcloud.base.Result;
 import com.ifsw.springcloud.entity.Payment;
 import com.ifsw.springcloud.service.PaymentService;
-import com.netflix.discovery.DiscoveryClient;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.cloud.netflix.eureka.EurekaDiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -25,8 +23,6 @@ public class PaymentController {
     private PaymentService paymentService;
     @Value("${server.port}")
     private String  port;
-    @Resource
-    private EurekaDiscoveryClient discoveryClient;
     @PostMapping("/create")
     public Result create(@RequestBody Payment payment) {
         int result = paymentService.create(payment);
@@ -48,9 +44,4 @@ public class PaymentController {
             return new Result(444, "查询失败", null);
         }
     }
-    @GetMapping("/discovery")
-    public Object discovery(){
-
-        return  this.discoveryClient;
-    };
 }
