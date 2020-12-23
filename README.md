@@ -3,7 +3,7 @@
 
 springcloud官网:https://spring.io/projects/spring-cloud
 
-![image-20201209210707128](C:\Users\zheng\AppData\Roaming\Typora\typora-user-images\image-20201209210707128.png)
+![image-20201209210707128](https://github.com/zhengliang961116/springcloud/blob/master/doc/images/image-20201209210707128.png)
 
 ## consul:
 
