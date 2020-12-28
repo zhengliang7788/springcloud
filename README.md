@@ -33,5 +33,8 @@ http://localhost:8500/
 3.配置日志级别 
 
 ```
-NONE,BASIC,HEADERS,FULL;
+NONE:不记录任何信息
+BASIC: 仅记录请求方法，url以及响应状态码和执行时间1
+HEADERS:出记录basic级别的信息外，还会记录请求和响应的头信息
+FULL:记录所有请求与响应的明细，包括头信息，请求头，元数据等
 ```

@@ -3,6 +3,7 @@ package com.ifsw.springcloud;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
@@ -11,6 +12,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * @date 2020/12/28 8:50
  */
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
+@EnableEurekaClient
 @EnableFeignClients
 public class FeignMain80
 {
