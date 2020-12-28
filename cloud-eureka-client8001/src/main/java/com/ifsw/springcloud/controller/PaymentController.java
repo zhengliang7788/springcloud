@@ -10,6 +10,7 @@ import org.springframework.cloud.netflix.eureka.EurekaDiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author zhengLiang
@@ -52,5 +53,14 @@ public class PaymentController {
     public Object discovery(){
 
         return  this.discoveryClient;
-    };
+    }
+    @GetMapping("/timeout")
+    public String timeout(){
+        try {
+            TimeUnit.SECONDS.sleep(3);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return port;
+    }
 }

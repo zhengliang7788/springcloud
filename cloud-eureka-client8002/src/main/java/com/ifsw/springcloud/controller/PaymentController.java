@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author zhengLiang
@@ -43,5 +44,14 @@ public class PaymentController {
         } else {
             return new Result(444, "查询失败", null);
         }
+    }
+    @GetMapping("/timeout")
+    public String timeout(){
+        try {
+            TimeUnit.SECONDS.sleep(3);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return port;
     }
 }

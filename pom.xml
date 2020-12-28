@@ -21,6 +21,7 @@
         <module>cloud-consul-client80</module>
         <module>cloud-consul-client8003</module>
         <module>cloud-eureka-client80-rule</module>
+        <module>cloud-eureka-client80-openFeign</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
