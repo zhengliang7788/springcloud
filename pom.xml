@@ -24,6 +24,7 @@
         <module>cloud-eureka-client80-openFeign</module>
         <module>cloud-eureka-client8004-hystrix</module>
         <module>cloud-eureka-client80-openFeign-hystrix</module>
+        <module>cloud-consumer-hystrix-dashboard9001</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

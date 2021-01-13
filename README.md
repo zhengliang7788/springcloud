@@ -58,14 +58,17 @@ FULL:记录所有请求与响应的明细，包括头信息，请求头，元数
 
 https://github.com/Netflix/Hystrix/wiki
 
-https://martinfowler.com/bliki/CircuitBreaker.html
-
 1.服务降级
 
-
-
 2.服务熔断
+
+https://martinfowler.com/bliki/CircuitBreaker.html
 
 `服务降级 ———>服务熔断———>恢复链路`
 
 3.服务限流
+
+hystrix dashboard:  实时监控Hystrix的各项指标信息
+
+## Getway:
+
