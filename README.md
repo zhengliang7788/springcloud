@@ -3,6 +3,8 @@
 
 springcloud官网:https://spring.io/projects/spring-cloud
 
+<img src="C:\Users\zheng\AppData\Roaming\Typora\typora-user-images\image-20210119104613777.png" alt="image-20210119104613777" style="zoom:50%;" />
+
 ## Eureka：
 
 
@@ -58,15 +60,15 @@ FULL:记录所有请求与响应的明细，包括头信息，请求头，元数
 
 https://github.com/Netflix/Hystrix/wiki
 
-## 1.服务降级
+### 1.服务降级
 
-## 2.服务熔断
+### 2.服务熔断
 
 https://martinfowler.com/bliki/CircuitBreaker.html
 
 `服务降级 ———>服务熔断———>恢复链路`
 
-## 3.服务限流
+### 3.服务限流
 
 hystrix dashboard:  实时监控Hystrix的各项指标信息
 
@@ -76,7 +78,7 @@ https://docs.spring.io/spring-cloud-gateway/docs/current/reference/html/#gateway
 
 <img src="C:\Users\zheng\AppData\Roaming\Typora\typora-user-images\image-20210119094518977.png" alt="image-20210119094518977" style="zoom: 50%;" />
 
-## 1.route(路由)
+### 1.route(路由)
 
 静态路由配置：
 
@@ -136,7 +138,7 @@ spring:
 	}
 ```
 
-## 2.predicate(断言)
+### 2.predicate(断言)
 
  after: 匹配指定日期之后的请求（java ZoneDateTime）
 
@@ -174,7 +176,7 @@ weight: 请求权重分配
   - Weight=group1, 2
 ```
 
-## 3.Filter（过滤器）
+### 3.Filter（过滤器）
 
 自定义全局过滤器
 
@@ -195,3 +197,19 @@ public class CustomFilter implements GlobalFilter, Ordered {
     }
 }
 ```
+
+## config+bus
+
+手动刷新获取配置信息
+
+```
+curl -X POST "http://localhost:3366/actuator/refresh"
+```
+
+消息总线（rabbitMQ）刷新各节点配置信息：
+
+```
+curl -X POST  http://localhost:3344/actuator/bus-refresh
+```
+
+<img src="C:\Users\zheng\AppData\Roaming\Typora\typora-user-images\image-20210121102015303.png" alt="image-20210121102015303" style="zoom:50%;" />
